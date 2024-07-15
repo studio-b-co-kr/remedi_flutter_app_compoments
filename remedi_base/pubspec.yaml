@@ -17,10 +17,10 @@ dependencies:
   cupertino_icons: ^1.0.5
 
   # app version, build number and etc
-  package_info_plus: ^3.0.1
+  package_info_plus: ^8.0.0
 
   # device info, os version, os type
-  device_info_plus: ^8.0.0
+  device_info_plus: ^10.1.0
 
   # uuid generator
   flutter_udid: ^2.0.0

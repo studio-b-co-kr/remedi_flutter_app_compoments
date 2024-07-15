@@ -63,15 +63,18 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: FutureBuilder(builder: (context, snapshot) {
-          String htmlString = 'about:blank';
-          if (snapshot.hasData) {
-            htmlString = "${snapshot.data}";
-          }
-          return ListView(
-            children: [Text(htmlString)],
-          );
-        }),
+        body: FutureBuilder(
+          builder: (context, snapshot) {
+            String htmlString = 'about:blank';
+            if (snapshot.hasData) {
+              htmlString = "${snapshot.data}";
+            }
+            return ListView(
+              children: [Text(htmlString)],
+            );
+          },
+          future: initPlatformState(),
+        ),
       ),
     );
   }
