@@ -13,7 +13,7 @@ class HttpError {
     this.stackTrace,
   });
 
-  factory HttpError.fromDioError(DioError error) {
+  factory HttpError.fromDioError(DioException error) {
     if (error.response != null) {
       return HttpError._(
           statusCode: error.response?.statusCode ?? 0,
@@ -23,7 +23,7 @@ class HttpError {
 
     return HttpError._(
       statusCode: 0,
-      message: error.message,
+      message: '${error.message}',
       data: error.error,
       stackTrace: error.stackTrace,
     );

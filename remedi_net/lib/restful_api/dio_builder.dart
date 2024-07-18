@@ -25,7 +25,7 @@ class DioBuilder {
     Dio dio = Dio();
 
     dio.options.baseUrl = baseUrl;
-    dio.options.connectTimeout = connectTimeout;
+    dio.options.connectTimeout = Duration(milliseconds: connectTimeout);
     dio.options.contentType = contentType;
 
     dio.interceptors.add(LogInterceptor(
