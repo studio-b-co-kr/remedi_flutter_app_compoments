@@ -52,6 +52,8 @@ class _AppWrapperState extends State<AppWrapper> with WidgetsBindingObserver {
       case AppLifecycleState.inactive:
         onInactive();
         break;
+      case AppLifecycleState.hidden:
+        break;
     }
   }
 
