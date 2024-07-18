@@ -29,6 +29,7 @@ class PermissionViewModel extends IPermissionViewModel {
     switch (repository.status ?? PermissionStatus.granted) {
       case PermissionStatus.granted:
       case PermissionStatus.limited:
+      case PermissionStatus.provisional:
         // close permission page and back to the screen to request permission.
         break;
       case PermissionStatus.denied:
@@ -67,6 +68,7 @@ class PermissionViewModel extends IPermissionViewModel {
     switch (status) {
       case PermissionStatus.granted:
       case PermissionStatus.limited:
+      case PermissionStatus.provisional:
         state = PermissionViewState.Granted;
 
         break;
