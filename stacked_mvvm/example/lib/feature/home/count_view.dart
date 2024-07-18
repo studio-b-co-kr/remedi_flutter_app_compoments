@@ -9,6 +9,6 @@ class CountView extends IView<IHomeViewModel> {
   Widget build(BuildContext context, IHomeViewModel viewModel) {
     return Text('${viewModel.count}',
         key: const Key('counterState'),
-        style: Theme.of(context).textTheme.headline4);
+        style: Theme.of(context).textTheme.headlineSmall);
   }
 }

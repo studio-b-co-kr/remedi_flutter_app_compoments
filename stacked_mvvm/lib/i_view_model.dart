@@ -5,6 +5,7 @@ abstract class IViewModel<S> extends BaseViewModel {
   late StreamController<S> _streamController;
   late Stream<S> _stream;
 
+  // ignore: invalid_annotation_target
   @mustCallSuper
   IViewModel() {
     state = initState;
