@@ -26,8 +26,8 @@ class FcmManager {
     AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings(
             androidDefaultIcon); // <- default icon name is @mipmap/ic_launcher
-    IOSInitializationSettings initializationSettingsIOS =
-        IOSInitializationSettings();
+    DarwinInitializationSettings initializationSettingsIOS =
+        DarwinInitializationSettings();
     InitializationSettings initializationSettings = InitializationSettings(
         android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
     await _flutterLocalNotificationsPlugin.initialize(initializationSettings);
@@ -135,7 +135,7 @@ class FcmManager {
             notification.hashCode,
             notification?.title,
             notification?.body,
-            NotificationDetails(iOS: IOSNotificationDetails()));
+            NotificationDetails(iOS: DarwinNotificationDetails()));
         return;
       }
     });
