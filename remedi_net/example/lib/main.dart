@@ -1,7 +1,7 @@
 import 'dart:developer' as dev;
 
 import 'package:flutter/material.dart';
-import 'package:remedi_net/remedi_net.dart';
+import 'package:remedi_net_new/remedi_net.dart';
 
 void main() {
   runApp(const MyApp());

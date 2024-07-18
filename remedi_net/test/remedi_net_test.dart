@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
-import 'package:remedi_net/remedi_net.dart';
+import 'package:remedi_net_new/remedi_net.dart';
 
 void main() {
   group('Test restful api', () {
