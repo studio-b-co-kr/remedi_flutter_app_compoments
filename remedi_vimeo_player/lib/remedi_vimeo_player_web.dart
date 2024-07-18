@@ -28,11 +28,11 @@ class RemediVimeoPlayerWeb {
     switch (call.method) {
       case 'getPlatformVersion':
         return getPlatformVersion();
-        break;
       default:
         throw PlatformException(
           code: 'Unimplemented',
-          details: 'remedi_vimeo_player for web doesn\'t implement \'${call.method}\'',
+          details:
+              'remedi_vimeo_player for web doesn\'t implement \'${call.method}\'',
         );
     }
   }
