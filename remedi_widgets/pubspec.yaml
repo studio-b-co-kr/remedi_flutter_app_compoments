@@ -1,6 +1,6 @@
 name: remedi_widgets
 description: A new Flutter package.
-version: 0.2.4
+version: 0.2.5
 homepage: 'https://github.com/studio-b-co-kr/remedi_flutter_app_components'
 repository: 'https://github.com/studio-b-co-kr/remedi_flutter_app_components'
 
@@ -16,10 +16,10 @@ dependencies:
     sdk: flutter
 
   # phone number input.
-  flutter_multi_formatter: ^2.8.8
+  flutter_multi_formatter: ^2.13.0
 
   # network image
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.10
   # extended_image: ^8.1.0
 
 dev_dependencies:
