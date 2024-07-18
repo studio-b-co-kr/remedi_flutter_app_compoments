@@ -6,10 +6,10 @@ import '../phone_number.dart';
 class PhoneNumberUtil {
   /// Accepts [phoneNumber] and [isoCode]
   /// Returns [Future<String>]
-  static Future<String?> getNameForNumber(
-      {required String phoneNumber, required String isoCode}) async {
-    return p.PhoneNumberUtil.getNameForNumber(phoneNumber, isoCode);
-  }
+  // static Future<String?> getNameForNumber(
+  //     {required String phoneNumber, required String isoCode}) async {
+  //   // return p.PhoneNumberUtil.getNameForNumber(phoneNumber, isoCode);
+  // }
 
   /// [isValidNumber] checks if a [phoneNumber] is valid.
   /// Accepts [phoneNumber] and [isoCode]

@@ -8,6 +8,7 @@ import 'package:remedi_auth/repository/i_login_repository.dart';
 import 'package:remedi_auth/resources/app_strings.dart';
 import 'package:remedi_auth/viewmodel/i_login_viewmodel.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'dart:developer' as dev;
 
 import '../../auth_error.dart';
 
@@ -142,7 +143,10 @@ class LoginViewModel extends ILoginViewModel {
         userId = (await UserApi.instance.accessTokenInfo()).id;
       } catch (error) {
         if (error is PlatformException && error.code == 'CANCELED') {
+          dev.log(error.toString(), name: 'CANCELED');
           return null;
+        } else {
+          dev.log(error.toString(), name: '`loginWithKakaoTalk()`');
         }
         // 카카오톡에 연결된 카카오계정이 없는 경우, 카카오계정으로 로그인
         try {
@@ -150,6 +154,8 @@ class LoginViewModel extends ILoginViewModel {
               (await UserApi.instance.loginWithKakaoAccount()).accessToken;
           userId = (await UserApi.instance.accessTokenInfo()).id;
         } catch (error) {
+          dev.log(error.toString(),
+              name: '`isKakaoTalkInstalled()` but `loginWithKakaoAccount()`');
           return null;
         }
       }
@@ -159,6 +165,7 @@ class LoginViewModel extends ILoginViewModel {
             (await UserApi.instance.loginWithKakaoAccount()).accessToken;
         userId = (await UserApi.instance.accessTokenInfo()).id;
       } catch (error) {
+        dev.log(error.toString(), name: '`loginWithKakaoAccount()`');
         return null;
       }
     }
