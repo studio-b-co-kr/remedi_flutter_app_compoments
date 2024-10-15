@@ -1,3 +1,5 @@
+## 0.2.7
+  update flutter webview
 ## 0.2.6
  update plugins
 
